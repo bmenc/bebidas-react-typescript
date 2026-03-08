@@ -7,3 +7,8 @@ const CategoryItemSchema = z.object({
 export const CategoriesAPIResponseSchema = z.object({
   drinks: z.array(CategoryItemSchema)
 })
+
+export const SearchFilterSchema = z.object({
+  ingredient: z.string(),
+  category: z.string()
+})
