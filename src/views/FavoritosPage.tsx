@@ -1,5 +1,10 @@
+import Header from "../components/Header";
+
 export default function FavoritosPage() {
   return (
-    <>FavoritosPage</>
+    <>
+      <Header />
+      <h1>Favoritos Page</h1>
+    </>
   )
 }
