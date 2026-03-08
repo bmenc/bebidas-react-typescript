@@ -13,7 +13,8 @@ export const createRecipesSlice: StateCreator<RecipesSliceType> = (set) => ({
   },
   fetchCategories: async () => {
     const categories = await getCategories()
-    set({ categories });
-
+    if (categories) {
+      set({ categories })
+    }
   }
 })
