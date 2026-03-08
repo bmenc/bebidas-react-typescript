@@ -10,7 +10,7 @@ export default function IndexPage() {
     <>
       <h1 className="text-6xl font-extrabold">Recetas</h1>
       {hasDrinks ? (
-        <>
+        <div className="grid gird-cols-1 md:grid-cols-2 2xl:grid-cols-3 my-10 gap-10">
           {
             drinks.drinks.map((drink) => (
               <DrinkCard
@@ -19,7 +19,7 @@ export default function IndexPage() {
               />
             ))
           }
-        </>
+        </div>
       ) : (
         <p className="my-10 text-center text-2xl">No hay resultados aún. Utiliza el formulario para buscar recetas.</p>
       )}
