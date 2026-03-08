@@ -53,17 +53,21 @@ export default function Header() {
             </div>
             <div className="space-y-4">
               <label
-                htmlFor="ingredient"
+                htmlFor="category"
                 className="block text-white uppercase font-extrabold text-lg"
               >Categoría</label>
 
               <select
-                id="ingredient"
-                name="ingredient"
+                id="category"
+                name="category"
                 className="p-3 w-full rounded-lg bg-white border border-gray-300 shadow-sm"
-                placeholder="Nombre o Ingrediente. Ej Vodka, Tequila, Café"
               >
                 <option value="">-- Seleccione --</option>
+                {categories.drinks.map((item) => (
+                  <option key={item.strCategory} value={item.strCategory}>
+                    {item.strCategory}
+                  </option>
+                ))}
               </select>
             </div>
             <input
