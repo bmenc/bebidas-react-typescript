@@ -8,22 +8,22 @@ export default function Header() {
   const isHome = useMemo(() => pathname === '/', [pathname])
 
   return (
-    <header className="bg-slate-800">
+    <header className={isHome ? 'bg-header bg-cover bg-center bg-no-repeat' : 'bg-slate-800'}>
       <div className="mx-auto container px-5 py-16">
         <div className="flex justify-between items-center">
           <div>
             <img src="/logo.svg" alt="logotipo" className="w-32" />
           </div>
-          <nav className="flex gap-4 ">
+          <nav className="flex gap-4 bg-slate-700 p-2 rounded-2xl">
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? 'text-orange-500 uppercase font-bold' : 'text-white uppercase font-bold'}
+                isActive ? 'text-orange-500 uppercase font-bold bg-slate-900 rounded-2xl p-2' : 'text-white uppercase font-bold p-2'}
             >Inicio</NavLink>
             <NavLink
               to="/favoritos"
               className={({ isActive }) =>
-                isActive ? 'text-orange-500 uppercase font-bold' : 'text-white uppercase font-bold'}
+                isActive ? 'text-orange-500 uppercase font-bold bg-slate-900 rounded-2xl p-2' : 'text-white uppercase font-bold p-2'}
             >Favoritos</NavLink>
           </nav>
         </div>
