@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { CategoriesAPIResponseSchema, DrinksAPIResponse, DrinkAPIResponse, RecipeAPIResponseSchema } from '../utils/recipes-schema'
+import { CategoriesAPIResponseSchema, DrinksAPIResponse, RecipeAPIResponseSchema } from '../utils/recipes-schema'
 import type { Drink, SearchFilter } from '../types'
 
 export async function getCategories() {
