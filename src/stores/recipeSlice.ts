@@ -36,10 +36,12 @@ export const createRecipesSlice: StateCreator<RecipesSliceType> = (set) => ({
   },
   selectRecipe: async (id) => {
     const selectedRecipe = await getRecipeById(id)
-    set({
-      selectedRecipe,
-      modal: true
-    })
+    if (selectedRecipe) {
+      set({
+        selectedRecipe,
+        modal: true
+      })
+    }
   },
   closeModal: () => {
     set({
