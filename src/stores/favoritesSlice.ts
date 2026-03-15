@@ -1,4 +1,4 @@
-import { StateCreator } from 'zustand'
+import type { StateCreator } from 'zustand'
 import type { Recipe } from '../types'
 import { createRecipesSlice, type RecipesSliceType } from './recipeSlice'
 import { createNotificationSlice, type NotificationSliceType } from './notificationSlice'
